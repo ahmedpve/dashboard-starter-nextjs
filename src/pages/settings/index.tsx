@@ -23,10 +23,10 @@ export default function Settings() {
     <>
       <Seo title={PAGE_TITLE} />
 
-      <Heading as="h2" size="lg" mb="space-xl">
+      <Heading as="h2" size="lg" mb="space-md">
         {PAGE_TITLE}
       </Heading>
-      <Box display="flex" alignItems="flex-start" gap="space-xl">
+      <Box display="flex" alignItems="flex-start" gap="space-md">
         <Card
           display={{ base: "none", md: "flex" }}
           flexDirection="column"
@@ -35,7 +35,7 @@ export default function Settings() {
           position="sticky"
           top="10vh"
           w="xs"
-          p="space-lg"
+          p="space-md"
           bgColor="bg.clear"
         >
           <Button
@@ -69,14 +69,14 @@ export default function Settings() {
             Account Management
           </Button>
         </Card>
-        <Box flexGrow="1" display="flex" flexDirection="column" gap="space-xl">
+        <Box flexGrow="1" display="flex" flexDirection="column" gap="space-md">
           <Card bgColor="bg.clear">
-            <Box as="header" p="space-lg" bgColor="neutral.100">
+            <Box as="header" p="space-md" bgColor="neutral.100">
               <Heading as="h6" id="basic-information" size="sm">
                 Basic Information
               </Heading>
             </Box>
-            <Box as="form" display="flex" flexDirection="column" gap="space-lg" p="space-lg">
+            <Box as="form" display="flex" flexDirection="column" gap="space-md" p="space-md">
               <Box display="flex" alignItems="center" gap="space-md">
                 <Avatar src={users[0].image.url} name={users[0].name} size="lg" bgColor="secondary.light" />
                 <Box display="flex" flexDirection="column" gap="space-xs">
@@ -136,12 +136,12 @@ export default function Settings() {
             </Box>
           </Card>
           <Card bgColor="bg.clear">
-            <Box as="header" p="space-lg" bgColor="neutral.100">
+            <Box as="header" p="space-md" bgColor="neutral.100">
               <Heading as="h6" id="pass-security" size="sm">
                 Password & Security
               </Heading>
             </Box>
-            <Box as="form" display="flex" flexDirection="column" gap="space-lg" p="space-lg">
+            <Box as="form" display="flex" flexDirection="column" gap="space-md" p="space-md">
               <Box display="flex" alignItems="center" gap="space-md">
                 <FormControl>
                   <FormLabel>Old Password</FormLabel>
@@ -166,12 +166,12 @@ export default function Settings() {
             </Box>
           </Card>
           <Card bgColor="bg.clear">
-            <Box as="header" p="space-lg" bgColor="neutral.100">
+            <Box as="header" p="space-md" bgColor="neutral.100">
               <Heading as="h6" id="account-management" size="sm">
                 Account Management
               </Heading>
             </Box>
-            <Box as="form" display="flex" flexDirection="column" gap="space-lg" p="space-lg">
+            <Box as="form" display="flex" flexDirection="column" gap="space-md" p="space-md">
               <Box display="flex" justifyContent="space-between">
                 <FormLabel>Reset All My Data</FormLabel>
                 <Button colorScheme="yellow">Reset</Button>
