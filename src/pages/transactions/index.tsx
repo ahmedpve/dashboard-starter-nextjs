@@ -5,19 +5,31 @@ import { transactions } from "../../data/transactions";
 export default function Transactions() {
   return (
     <PageWrapper title="Transactions">
-      <Card bgColor="bg.clear">
+      <Card overflow="hidden" bgColor="bg.clear">
         <TableContainer>
           <Table
             sx={{
-              "& td": { textTransform: "capitalize" },
-              "& th": { bgColor: "primary.main", color: "white" },
+              // borderSpacing: "0.1rem",
+              // borderCollapse: "separate",
+              "& td": { border: "1px", borderColor: "border", py: "space-xs", textTransform: "capitalize" },
+              "& th": {
+                border: "1px",
+                py: "1.5",
+                bgColor: "primary.main",
+                color: "white",
+                fontSize: "inherit",
+                fontWeight: "medium",
+                textAlign: "center",
+                textTransform: "capitalize",
+                letterSpacing: "normal",
+              },
             }}
           >
             <Thead>
               <Tr>
-                <Th>Id</Th>
-                <Th>Date</Th>
-                <Th>Description</Th>
+                <Th rowSpan={2}>Id</Th>
+                <Th rowSpan={2}>Date</Th>
+                <Th rowSpan={2}>Description</Th>
                 <Th colSpan={2} textAlign="center">
                   Debit
                 </Th>
@@ -26,20 +38,17 @@ export default function Transactions() {
                 </Th>
               </Tr>
               <Tr>
-                <Th></Th>
-                <Th></Th>
-                <Th></Th>
                 <Th>Account</Th>
-                <Th isNumeric>Amount</Th>
+                <Th>Amount</Th>
                 <Th>Account</Th>
-                <Th isNumeric>Amount</Th>
+                <Th>Amount</Th>
               </Tr>
             </Thead>
             <Tbody>
               {transactions.map((transaction) => (
                 <Tr key={transaction.id}>
                   <Td>{transaction.id}</Td>
-                  <Td>
+                  <Td fontWeight="medium">
                     {new Date(transaction.date).toLocaleDateString("en", {
                       weekday: "short",
                       day: "numeric",
@@ -51,14 +60,14 @@ export default function Transactions() {
                     {transaction.description}
                   </Td>
                   <Td>{transaction.debit.account}</Td>
-                  <Td isNumeric>
+                  <Td isNumeric bgColor="primary.50" fontWeight="medium">
                     {transaction.debit.amount.toLocaleString("en")}{" "}
                     <Text as="span" fontSize="xs">
                       {transaction.debit.currency}
                     </Text>
                   </Td>
                   <Td>{transaction.credit.account}</Td>
-                  <Td isNumeric>
+                  <Td isNumeric bgColor="primary.50" fontWeight="medium">
                     {transaction.credit.amount.toLocaleString("en")}{" "}
                     <Text as="span" fontSize="xs">
                       {transaction.credit.currency}
