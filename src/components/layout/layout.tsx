@@ -25,7 +25,7 @@ export default function Layout({ children }: LayoutProps) {
         flexDirection="column"
         position="fixed"
         top="0"
-        zIndex="docked"
+        zIndex="banner"
         w={isMiniSideNav ? "24" : "72"}
         h="100vh"
         overflow="auto"
@@ -44,7 +44,7 @@ export default function Layout({ children }: LayoutProps) {
         transitionDuration="fast"
       >
         <Header onToggleMiniSideNav={onToggleMiniSideNav} onToggleSideNavDrawer={onToggleSideNavDrawer} />
-        <Box as="main" flexGrow="1" px="space-md" py="space-lg">
+        <Box as="main" flexGrow="1">
           {children}
         </Box>
         <Footer />

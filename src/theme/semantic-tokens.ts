@@ -10,8 +10,8 @@ export const semanticTokens = {
         _dark: "blackAlpha.900",
       },
       opaque: {
-        _light: "whiteAlpha.700",
-        _dark: "blackAlpha.700",
+        _light: "whiteAlpha.900",
+        _dark: "blackAlpha.900",
       },
       filled: {
         _light: "primary.dark",
@@ -19,7 +19,7 @@ export const semanticTokens = {
       },
     },
     border: {
-      _light: "neutral.200",
+      _light: "neutral.300",
       _dark: "whiteAlpha.300",
     },
     text: {

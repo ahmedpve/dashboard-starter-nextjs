@@ -1,14 +1,10 @@
 import { Box } from "@chakra-ui/react";
-import Seo from "../components/elements/seo";
+import PageWrapper from "../components/elements/page-wrapper";
 
 export default function Home() {
-  const PAGE_TITLE = "Home";
-
   return (
-    <>
-      <Seo title={PAGE_TITLE} />
-
+    <PageWrapper title="Home">
       <Box>Hello</Box>
-    </>
+    </PageWrapper>
   );
 }

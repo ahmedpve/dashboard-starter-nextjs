@@ -13,19 +13,12 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { TbArmchair2, TbShieldCog, TbUserSquareRounded } from "react-icons/tb";
-import Seo from "../../components/elements/seo";
+import PageWrapper from "../../components/elements/page-wrapper";
 import { users } from "../../data/users";
 
 export default function Settings() {
-  const PAGE_TITLE = "Settings";
-
   return (
-    <>
-      <Seo title={PAGE_TITLE} />
-
-      <Heading as="h2" size="lg" mb="space-md">
-        {PAGE_TITLE}
-      </Heading>
+    <PageWrapper title="Settings">
       <Box display="flex" alignItems="flex-start" gap="space-md">
         <Card
           display={{ base: "none", md: "flex" }}
@@ -81,7 +74,7 @@ export default function Settings() {
                 <Avatar src={users[0].image.url} name={users[0].name} size="lg" bgColor="secondary.light" />
                 <Box display="flex" flexDirection="column" gap="space-xs">
                   <Text fontWeight="semibold">Profile Image</Text>
-                  <Button colorScheme="secondary" size="sm" variant="outline">
+                  <Button colorScheme="secondary" size="sm" variant="outline" fontSize="inherit">
                     Update
                   </Button>
                 </Box>
@@ -184,6 +177,6 @@ export default function Settings() {
           </Card>
         </Box>
       </Box>
-    </>
+    </PageWrapper>
   );
 }

@@ -1,34 +1,52 @@
 import { Transaction } from "../types/transaction";
 
-export const transactions: Transaction[] = [
+const transactionsSample: Transaction[] = [
   {
-    debits: [{ account: "cash", amount: 15000, currency: "EGP" }],
-    credits: [{ account: "revenue", amount: 15000, currency: "EGP" }],
-    description: "Monthly Income",
+    id: "1",
+    debit: { account: "cash", amount: 15000, currency: "EGP" },
+    credit: { account: "revenue", amount: 15000, currency: "EGP" },
+    description: "Monthly income.",
     date: "31-oct-2023",
   },
   {
-    debits: [{ account: "cash", amount: 15000, currency: "EGP" }],
-    credits: [{ account: "revenue", amount: 15000, currency: "EGP" }],
-    description: "Monthly Income",
+    id: "2",
+    debit: { account: "cash", amount: 15000, currency: "EGP" },
+    credit: { account: "revenue", amount: 15000, currency: "EGP" },
+    description: "Monthly income.",
     date: "31-oct-2023",
   },
   {
-    debits: [{ account: "cash", amount: 15000, currency: "EGP" }],
-    credits: [{ account: "revenue", amount: 15000, currency: "EGP" }],
-    description: "Monthly Income",
+    id: "3",
+    debit: { account: "cash", amount: 15000, currency: "EGP" },
+    credit: { account: "revenue", amount: 15000, currency: "EGP" },
+    description: "Monthly income.",
     date: "31-oct-2023",
   },
   {
-    debits: [{ account: "cash", amount: 15000, currency: "EGP" }],
-    credits: [{ account: "revenue", amount: 15000, currency: "EGP" }],
-    description: "Monthly Income",
+    id: "4",
+    debit: { account: "cash", amount: 15000, currency: "EGP" },
+    credit: { account: "revenue", amount: 15000, currency: "EGP" },
+    description: "Monthly income.",
     date: "31-oct-2023",
   },
   {
-    debits: [{ account: "cash", amount: 15000, currency: "EGP" }],
-    credits: [{ account: "revenue", amount: 15000, currency: "EGP" }],
-    description: "Monthly Income",
+    id: "5",
+    debit: { account: "cash", amount: 15000, currency: "EGP" },
+    credit: { account: "revenue", amount: 15000, currency: "EGP" },
+    description: "Monthly income.",
     date: "31-oct-2023",
   },
 ];
+
+export const transactions: Transaction[] = [
+  ...transactionsSample,
+  ...transactionsSample,
+  ...transactionsSample,
+  ...transactionsSample,
+  ...transactionsSample,
+  ...transactionsSample,
+  ...transactionsSample,
+  ...transactionsSample,
+  ...transactionsSample,
+  ...transactionsSample,
+].map((t, i) => ({ ...t, id: String(i + 1) }));
