@@ -1,6 +1,7 @@
 import { Card, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr } from "@chakra-ui/react";
 import PageWrapper from "../../components/elements/page-wrapper";
 import { transactions } from "../../data/transactions";
+import { UNITS } from "../../data/units";
 
 export default function Transactions() {
   return (
@@ -9,11 +10,10 @@ export default function Transactions() {
         <TableContainer>
           <Table
             sx={{
-              // borderSpacing: "0.1rem",
-              // borderCollapse: "separate",
-              "& td": { border: "1px", borderColor: "border", py: "space-xs", textTransform: "capitalize" },
+              "& td": { border: "1px", borderColor: "neutral.100", py: "space-xs", textTransform: "capitalize" },
               "& th": {
                 border: "1px",
+                borderColor: "primary.100",
                 py: "1.5",
                 bgColor: "primary.main",
                 color: "white",
@@ -63,14 +63,14 @@ export default function Transactions() {
                   <Td isNumeric bgColor="primary.50" fontWeight="medium">
                     {transaction.debit.amount.toLocaleString("en")}{" "}
                     <Text as="span" fontSize="xs">
-                      {transaction.debit.currency}
+                      {UNITS.CURRENCY.EGP}
                     </Text>
                   </Td>
                   <Td>{transaction.credit.account}</Td>
                   <Td isNumeric bgColor="primary.50" fontWeight="medium">
                     {transaction.credit.amount.toLocaleString("en")}{" "}
                     <Text as="span" fontSize="xs">
-                      {transaction.credit.currency}
+                      {UNITS.CURRENCY.EGP}
                     </Text>
                   </Td>
                 </Tr>

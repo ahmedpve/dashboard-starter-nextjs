@@ -12,13 +12,13 @@ export const users: User[] = [
     currency: "EGP",
     accounts: [
       {
+        id: "1",
         title: "cash on hand",
         type: "debit",
         statement: "balance-sheet",
         section: "cash",
         value: {
           amount: 10000,
-          currency: "EGP",
         },
       },
     ],
