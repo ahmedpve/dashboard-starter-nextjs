@@ -14,6 +14,7 @@ import {
 import NextLink from "next/link";
 import { TbArmchair2, TbShieldCog, TbUserSquareRounded } from "react-icons/tb";
 import PageWrapper from "../../components/elements/page-wrapper";
+import Layout from "../../components/layout/layout";
 import { users } from "../../data/users";
 
 export default function Settings() {
@@ -71,7 +72,7 @@ export default function Settings() {
             </Box>
             <Box as="form" display="flex" flexDirection="column" gap="space-md" p="space-md">
               <Box display="flex" alignItems="center" gap="space-md">
-                <Avatar src={users[0].image.url} name={users[0].name} size="lg" bgColor="secondary.light" />
+                <Avatar src={users[0].image.path} name={users[0].name} size="lg" bgColor="secondary.light" />
                 <Box display="flex" flexDirection="column" gap="space-xs">
                   <Text fontWeight="semibold">Profile Image</Text>
                   <Button colorScheme="secondary" size="sm" variant="outline" fontSize="inherit">
@@ -85,9 +86,9 @@ export default function Settings() {
                   <Input />
                 </FormControl>
                 <FormControl>
-                  <FormLabel>Currency</FormLabel>
+                  <FormLabel>Country</FormLabel>
                   <Select>
-                    {["EGP", "EUR", "USD"].map((o) => (
+                    {["Egypt"].map((o) => (
                       <option key={o} value={0}>
                         {o}
                       </option>
@@ -180,3 +181,7 @@ export default function Settings() {
     </PageWrapper>
   );
 }
+
+Settings.getLayout = function (page: React.ReactElement) {
+  return <Layout>{page}</Layout>;
+};

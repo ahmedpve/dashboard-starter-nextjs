@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import PageWrapper from "../components/elements/page-wrapper";
+import Layout from "../components/layout/layout";
 
 export default function Home() {
   return (
@@ -8,3 +9,7 @@ export default function Home() {
     </PageWrapper>
   );
 }
+
+Home.getLayout = function (page: React.ReactElement) {
+  return <Layout>{page}</Layout>;
+};

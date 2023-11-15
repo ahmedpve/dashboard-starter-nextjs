@@ -4,22 +4,22 @@ export const paths = {
     signin: "/auth/signin",
     signup: "/auth/signup",
   },
-  accounts: {
-    index: "/accounts",
+  page2: {
+    index: "/page2",
   },
-  transactions: {
-    index: "/transactions",
+  page3: {
+    index: "/page3",
   },
-  budget: {
-    index: "/budget",
+  page4: {
+    index: "/page4",
   },
-  statements: {
-    index: "/statements",
+  page5: {
+    index: "/page5",
   },
   settings: {
     index: "/settings",
   },
-  help: {
-    index: "/help",
+  page7: {
+    index: "/page7",
   },
 };

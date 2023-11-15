@@ -28,7 +28,7 @@ export const semanticTokens = {
         _dark: "whiteAlpha.900",
       },
       secondary: {
-        _light: "neutral.500",
+        _light: "neutral.600",
         _dark: "neutral.300",
       },
     },

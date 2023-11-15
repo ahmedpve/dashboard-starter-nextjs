@@ -7,22 +7,10 @@ export const users: User[] = [
     email: "ahmed@mailsac.com",
     password: "11111111",
     image: {
-      url: "",
+      path: "",
     },
-    currency: "EGP",
-    accounts: [
-      {
-        id: "1",
-        title: "cash on hand",
-        type: "debit",
-        statement: "balance-sheet",
-        section: "cash",
-        value: {
-          amount: 10000,
-        },
-      },
-    ],
-    createAt: "26-oct-2023",
-    updatedAt: "26-oct-2023",
+    country: "Egypt",
+    createAt: "1-month-year",
+    updatedAt: "1-month-year",
   },
 ];

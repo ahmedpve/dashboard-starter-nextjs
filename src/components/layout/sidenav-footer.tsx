@@ -14,7 +14,7 @@ export default function SideNavFooter({ isMiniSideNav }: SideNavFooterProps) {
         <Button
           colorScheme="secondary"
           variant="unstyled"
-          leftIcon={<Avatar src={users[0].image.url} name={users[0].name} bgColor="secondary.light" />}
+          leftIcon={<Avatar src={users[0].image.path} name={users[0].name} bgColor="secondary.light" />}
           {...(!isMiniSideNav && {
             rightIcon: <Icon as={TbChevronDown} />,
           })}

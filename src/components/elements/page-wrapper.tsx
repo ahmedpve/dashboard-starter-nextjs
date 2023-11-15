@@ -13,11 +13,9 @@ export default function PageWrapper({ title, children }: PageWrapperProps) {
       <Head>
         <title>{`${title} | ${appConfig.title}`}</title>
       </Head>
-
       <Heading as="h1" size="lg" p="space-md">
         {title}
       </Heading>
-
       <Box p="space-md" pt="0">
         {children}
       </Box>

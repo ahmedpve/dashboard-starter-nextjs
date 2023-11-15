@@ -1,5 +1,5 @@
 export const appConfig = {
-  title: "My Wallet",
-  description: "Web application to monitor and make a budget for personal expenses.",
-  copyright: "© My Wallet 2023",
+  title: "My App",
+  description: "Starter project for a dashboard.",
+  copyright: "© My App [Year]",
 };

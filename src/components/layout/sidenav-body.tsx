@@ -37,21 +37,11 @@ export default function SideNavBody({ isMiniSideNav }: SideNavBodyProps) {
           Main Menu
         </Heading>
       )}
-      <SideNavItem label="home" path={paths.index} icon={TbTableOptions} isMiniSideNav={isMiniSideNav} />
-      <SideNavItem label="accounts" path={paths.accounts.index} icon={TbBuildingBank} isMiniSideNav={isMiniSideNav} />
-      <SideNavItem
-        label="transactions"
-        path={paths.transactions.index}
-        icon={TbListDetails}
-        isMiniSideNav={isMiniSideNav}
-      />
-      <SideNavItem label="budget" path={paths.budget.index} icon={TbPigMoney} isMiniSideNav={isMiniSideNav} />
-      <SideNavItem
-        label="statements"
-        path={paths.statements.index}
-        icon={TbReportAnalytics}
-        isMiniSideNav={isMiniSideNav}
-      />
+      <SideNavItem label="Home" path={paths.index} icon={TbTableOptions} isMiniSideNav={isMiniSideNav} />
+      <SideNavItem label="Page 2" path={paths.page2.index} icon={TbBuildingBank} isMiniSideNav={isMiniSideNav} />
+      <SideNavItem label="Page 3" path={paths.page3.index} icon={TbListDetails} isMiniSideNav={isMiniSideNav} />
+      <SideNavItem label="Page 4" path={paths.page4.index} icon={TbPigMoney} isMiniSideNav={isMiniSideNav} />
+      <SideNavItem label="Page 5" path={paths.page5.index} icon={TbReportAnalytics} isMiniSideNav={isMiniSideNav} />
       <Divider />
       {!isMiniSideNav && (
         <Heading
@@ -62,16 +52,11 @@ export default function SideNavBody({ isMiniSideNav }: SideNavBodyProps) {
           textTransform="uppercase"
           letterSpacing="wider"
         >
-          Account
+          Sub Heading 2
         </Heading>
       )}
-      <SideNavItem label="settings" path={paths.settings.index} icon={TbSettings} isMiniSideNav={isMiniSideNav} />
-      <SideNavItem
-        label="help & support"
-        path={paths.help.index}
-        icon={TbHelpSquareRounded}
-        isMiniSideNav={isMiniSideNav}
-      />
+      <SideNavItem label="Settings" path={paths.settings.index} icon={TbSettings} isMiniSideNav={isMiniSideNav} />
+      <SideNavItem label="Page 7" path={paths.page7.index} icon={TbHelpSquareRounded} isMiniSideNav={isMiniSideNav} />
     </Box>
   );
 }
